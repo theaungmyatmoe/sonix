@@ -4,10 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 6006",
-    "build": "storybook build"
+    "build": "storybook build",
+    "build-storybook": "concurrently \"pnpm:build:*\"",
+    "dev": "concurrently \"pnpm:watch:*\"",
+    "build:css": "npx tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css",
+    "build:storybook": "storybook build",
+    "watch:css": "npx tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css --watch",
+    "watch:storybook": "storybook dev -p 6006"
   },
   "dependencies": {
+    "config": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ui": "workspace:*"
@@ -18,6 +24,7 @@
     "@storybook/addon-essentials": "^7.0.0-beta.43",
     "@storybook/addon-interactions": "^7.0.0-beta.43",
     "@storybook/addon-links": "^7.0.0-beta.43",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/cli": "^7.0.0-beta.43",
     "@storybook/react": "^7.0.0-beta.43",
     "@storybook/react-vite": "^7.0.0-beta.43",
@@ -26,6 +33,7 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
     "babel-loader": "^8.3.0",
+    "concurrently": "^7.6.0",
     "storybook": "^7.0.0-beta.43",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
