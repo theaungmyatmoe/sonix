@@ -1,5 +1,6 @@
 import { ComponentPropsWithoutRef, forwardRef, PropsWithChildren } from "react";
 import { StyledButton } from "./StyledButton";
+import PropTypes from "prop-types";
 
 export interface IButtonProps
   extends PropsWithChildren<ComponentPropsWithoutRef<"button">> {
@@ -38,6 +39,12 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
     );
   }
 );
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(["primary", "secondary"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+  block: PropTypes.bool,
+};
 
 Button.defaultProps = {
   variant: "primary",
