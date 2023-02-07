@@ -8,22 +8,11 @@ export interface IButtonProps
   size?: "small" | "medium" | "large";
   className?: string;
   disabled?: boolean;
-  block?: boolean;
+  block?: "true" | "false";
 }
 
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
-  (
-    {
-      children,
-      variant,
-      size,
-      className,
-      block: fullWidth = false,
-      disabled,
-      ...props
-    },
-    ref
-  ) => {
+  ({ children, variant, size, className, block, disabled, ...props }, ref) => {
     return (
       <StyledButton
         ref={ref}
@@ -31,7 +20,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
         size={size}
         className={className}
         disabled={disabled}
-        block={fullWidth}
+        block={block}
         {...props}
       >
         {children}
@@ -43,13 +32,15 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
 Button.propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
-  block: PropTypes.bool,
+  disabled: PropTypes.bool,
+  block: PropTypes.oneOf(["true", "false"]),
 };
 
 Button.defaultProps = {
   variant: "primary",
   size: "medium",
-  block: false,
+  disabled: false,
+  block: "false",
 };
 
 Button.displayName = "Button";

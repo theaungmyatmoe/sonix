@@ -2,7 +2,7 @@ import tw from "tailwind-styled-components";
 import { IButtonProps } from "./Button";
 
 export const StyledButton = tw.button<IButtonProps>`
-${(props) => (props.block ? "w-full block" : "inline-flex")} 
+${(props) => (props.block === "true" ? "w-full block" : "inline-flex")} 
 items-center justify-center font-medium rounded-md focus:outline-none 
 focus:ring-2 focus:ring-offset-2 focus:ring-zinc-400
 
