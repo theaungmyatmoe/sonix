@@ -28,8 +28,7 @@ ${({ size }) => {
       return "px-6 py-3 text-lg";
   }
 }}
-
-$({ disabled }) => (disabled ? "opacity-50 cursor-not-allowed" : "")}
+${({ disabled }) => disabled && "opacity-50 cursor-not-allowed"}
 ${({ className }) => className}
 `;
 
