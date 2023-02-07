@@ -31,14 +31,19 @@ Disabled.args = {
   disabled: true,
 };
 
+export const Small = Template.bind({});
+Small.args = {
+  size: "small",
+};
+
 export const Large = Template.bind({});
 Large.args = {
   size: "large",
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
+export const FullWidthButton = Template.bind({});
+FullWidthButton.args = {
+  block: true,
 };
 
 export const Danger = Template.bind({});
