@@ -15,3 +15,33 @@ const Template: StoryFn<typeof Button> = (args) => (
 );
 
 export const Default = Template.bind({});
+
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: "primary",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: "secondary",
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: "large",
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  size: "small",
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  className: "bg-red-600",
+};
