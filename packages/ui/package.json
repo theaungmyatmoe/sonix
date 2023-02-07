@@ -13,11 +13,12 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
+    "tailwind-styled-components": "^2.2.0",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "config": "workspace:*",
-    "clsx": "^1.2.1"
+    "clsx": "^1.2.1",
+    "config": "workspace:*"
   }
 }
