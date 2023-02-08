@@ -28,18 +28,6 @@ pnpm install
 │       ├── public
 │       ├── src
 │       │   └── stories
-│       └── storybook-static
-│           ├── sb-addons
-│           │   ├── essentials-actions-2
-│           │   ├── essentials-backgrounds-3
-│           │   ├── essentials-controls-1
-│           │   ├── essentials-measure-6
-│           │   ├── essentials-outline-7
-│           │   ├── essentials-toolbars-5
-│           │   ├── essentials-viewport-4
-│           │   ├── interactions-8
-│           │   └── links-0
-│           └── sb-manager
 └── packages
     ├── config
     ├── eslint-config-custom
