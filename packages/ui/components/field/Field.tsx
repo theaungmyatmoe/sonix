@@ -3,10 +3,12 @@ import { FC, PropsWithChildren, ReactNode } from "react";
 import { FieldContext } from "./FieldContext";
 import { Input } from "./Input";
 import { Label } from "./Label";
+import { TextArea } from "./TextArea";
 
 interface IFieldComposition {
   Label: typeof Label;
   Input: typeof Input;
+  TextArea: typeof TextArea;
 }
 
 export const Field: FC<PropsWithChildren> & IFieldComposition = ({
@@ -20,3 +22,4 @@ export const Field: FC<PropsWithChildren> & IFieldComposition = ({
 
 Field.Label = Label;
 Field.Input = Input;
+Field.TextArea = TextArea;

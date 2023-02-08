@@ -4,27 +4,30 @@ import { StoryFn, Meta } from "@storybook/react";
 import { Field } from "ui";
 
 export default {
-  title: "Example/Field",
+  title: "Example/TextArea",
   component: Field.Input,
   subcomponents: { Input: Field.Input, Label: Field.Label }
 } as Meta;
 
 const Template: StoryFn = (args) => (
   <Field>
-    <Field.Label {...args}>Label</Field.Label>
-    <Field.Input placeholder={args.placeholder} {...args} />
+    <Field.Label {...args}></Field.Label>
+    <Field.TextArea  {...args} />
   </Field>
 );
 
-export const Default = Template.bind({});
 
+export const Default = Template.bind({});
 Default.args = {
-  placeholder: "Placeholder",
-  disabled: false
+  isResizable: true
+};
+
+export const UnResizable = Template.bind({});
+UnResizable.args = {
+  isResizable: false
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  placeholder: "Placeholder",
-  disabled: true
+  disabled: "true"
 };
