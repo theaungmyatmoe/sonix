@@ -6,7 +6,7 @@ import { Button } from "ui";
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Example/Button",
-  component: Button,
+  component: Button
 } as Meta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -18,35 +18,35 @@ export const Default = Template.bind({});
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: "primary",
+  variant: "primary"
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  variant: "secondary",
+  variant: "secondary"
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  disabled: true,
+  disabled: true
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: "small",
+  size: "small"
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  size: "large",
+  size: "large"
 };
 
 export const FullWidthButton = Template.bind({});
 FullWidthButton.args = {
-  block: true,
+  block: "true"
 };
 
-export const Danger = Template.bind({});
-Danger.args = {
-  className: "bg-red-600",
+export const Custom = Template.bind({});
+Custom.args = {
+  className: "bg-red-500 hover:bg-red-700"
 };
