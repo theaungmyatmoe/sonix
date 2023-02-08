@@ -2,7 +2,7 @@ import { Button, Field } from "ui";
 
 export default function Web() {
   return (
-    <main className="grid content-center justify-center h-screen">
+    <main className="grid content-center justify-center h-screen px-8">
       <div className="flex flex-col mb-6 gap-y-2">
         <h1 className="text-4xl font-bold text-zinc-800">
           Subscribe to our newsletter
