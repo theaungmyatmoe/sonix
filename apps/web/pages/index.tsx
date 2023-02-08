@@ -2,8 +2,8 @@ import { Button, Field } from "ui";
 
 export default function Web() {
   return (
-    <main className="grid h-screen content-center justify-center">
-      <div className="mb-6 flex flex-col gap-y-2">
+    <main className="grid content-center justify-center h-screen">
+      <div className="flex flex-col mb-6 gap-y-2">
         <h1 className="text-4xl font-bold text-zinc-800">
           Subscribe to our newsletter
         </h1>

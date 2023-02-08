@@ -12,8 +12,8 @@ interface IFieldComposition {
 }
 
 export const Field: FC<PropsWithChildren> & IFieldComposition = ({
-                                                                   children
-                                                                 }) => {
+  children,
+}) => {
   const id = nanoid();
   return (
     <FieldContext.Provider value={{ id }}>{children}</FieldContext.Provider>
